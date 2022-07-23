@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <script type="text/javascript">
+      window.onload = () => {
+        const topicList = document.createElement('ul');
+        createMeSomeElements('li', 'Topic Number', topicList, 100);
+        document.getElementById('topics').appendChild(topicList);
+        let storyText = '';
+        for (let i = 0; i < 50; ++i) {
+          storyText += 'This is a story. '
+        }
+        createMeSomeElements('p', storyText, document.getElementById('stories'), 25);
+      }
+
+      function createMeSomeElements(tag, text, parent, cnt) {
+        for (let i = 0; i < cnt; ++i) {
+          const newElement = document.createElement(tag);
+          const textElement = document.createTextNode(text + ' ' + (i+1));
+          newElement.appendChild(textElement);
+          parent.appendChild(newElement);
+        }
+      }
+
+    </script>
+
+    <style>
+
+      body {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+
+      #app {
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      #header {
+        position: fixed;
+        width: 100%;
+        max-width: 1300px;
+        height: 60px;
+        background-color: blue;
+      }
+
+      #topic-story-container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1300px;
+        height: 100vh;
+        padding: 60px 0 60px 0;
+        border: 1px solid black;
+      }
+
+      #topics {
+        float: left;
+        width: auto;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: red;
+      }
+
+      #stories {
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: green;
+      }
+
+      #footer {
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        max-width: 1300px;
+        height: 60px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="header">Header</div>
+      <div id="topic-story-container">
+        <div id="topics"></div>
+        <div id="stories"></div>
+      </div>
+      <div id="footer">Footer</div>
+    </div>
+  </body>
+
+</html>

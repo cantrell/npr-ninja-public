@@ -1,0 +1,163 @@
+#App {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  max-width: 1300px;
+  background-color: #fff;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  max-width: 1300px;
+  height: 60px;
+}
+
+#TopicStoryLayout {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1300px;
+  height: 100vh;
+  padding: 60px 0 60px 0;
+  background-color: #f5f5f5;
+}
+
+#TopicList {
+  float: left;
+  width: auto;
+  height: 100%;
+  padding: 0px 10px 0 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#StoryList {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+#click-catcher {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@supports (backdrop-filter: blur(4px)) {
+  #click-catcher {
+    backdrop-filter: blur(4px);
+  }
+}
+
+@supports not (backdrop-filter: blur(4px)) {
+  #click-catcher {
+    background-color: rgba(255, 255, 255, 0.0);
+  }
+}
+
+.click-catcher-open {
+  display: block !important;
+}
+
+.topic-list-open {
+  left: 0 !important;
+}
+
+.topic-list-close-button-show {
+  left: 0 !important;
+}
+
+footer {
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1300px;
+  height: 60px;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* If you want hover button effects, this is place to add them. */
+
+/* .button {
+  transition: opacity .25s;
+}
+
+.button:hover {
+  opacity: 0.5;
+} */
+
+.disabled {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+@media (max-width: 1300px) {
+  header, footer {
+    border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+
+  body {
+    background-color: #fff !important;
+  }
+
+  header {
+    position: relative;
+  }
+
+  #search-input {
+    width: 100px;
+  }
+
+  #StoryList {
+    overflow-y: hidden;
+  }
+
+  #TopicStoryLayout {
+    height: unset;
+    background-color: #fff;
+    padding: 0 0 60px 0;
+  }
+
+  #TopicList {
+    transition: left .35s ease-in;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  #topic-list-close-button {
+    transition: left .35s ease-in;
+  }
+
+  #empty-message-pointer {
+    transform: rotate(58deg);
+  }
+
+  #last-updated, #info-button {
+    display: none;
+  }
+
+  #refresh-button-label {
+    display: none;
+  }
+
+  #refresh-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-size: unset;
+  }
+}

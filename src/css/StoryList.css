@@ -1,0 +1,51 @@
+#StoryList {
+  box-sizing: border-box;
+  padding: 10px 10px 0 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+#StoryList a {
+  text-decoration: none;
+  color: #4f7dc9;
+}
+
+#StoryList a:visited {
+  color: #4f7dc9;
+}
+
+#story-list-wrapper {
+  padding-bottom: 30px;
+}
+
+#empty-message {
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#search-term-label {
+  font-weight: 800;
+  padding-bottom: 18px;
+}
+
+.story-divider {
+  clear: both;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+
+.emoji {
+  display: inline-block;
+}
+
+.emoji-caption {
+  font-size: 20px;
+  padding: 5px;
+}

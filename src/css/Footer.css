@@ -1,0 +1,50 @@
+footer {
+  border-radius: 0 0 10px 10px;
+  background-color: #4f7dc9;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+footer a:visited {
+  color: #fff;
+}
+
+#refresh-button {
+  margin: 0 5px 0 10px;
+  font-size: 18px;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 5px 0 0 5px;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #fff url('../assets/refresh.svg') no-repeat;
+  background-size: 24px 24px;
+  background-position: right;
+  color: #4f7dc9;
+}
+
+#last-updated {
+  width: 160px;
+  margin: 0px 5px 0 5px;
+  font-size: 14px;
+}
+
+#audio-player-container {
+  margin: 0px 5px 0 5px;
+  flex: 1;
+}
+
+footer audio {
+  width: 100%;
+}
+
+#info-button {
+  margin: 0 10px 0 5px;
+  width: 40px;
+  height: 40px;
+  background: url('../assets/info.svg') no-repeat;
+  cursor: pointer;
+}

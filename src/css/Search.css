@@ -1,0 +1,36 @@
+#Search form {
+  margin: 0 20px 0 0;
+}
+
+#search-input {
+  margin: 0 14px 0 0;
+  text-indent: 20px;
+  box-sizing: content-box;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.2);
+  height: 24px;
+  width: 170px;
+  padding: 3px 23px 3px 8px;
+  outline: none;
+  background: white url('../assets/magnifying_glass.svg') no-repeat;
+  background-size: 16px 16px;
+  background-position: 6px 7px;
+}
+
+#reset-input {
+  padding: 0;
+  margin-left: -38px;
+	background: white url('../assets/close_button.svg') no-repeat;
+  background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+  border: 0;
+	border-radius: 8px;
+	text-indent: -999px;
+	cursor: pointer;
+  outline: none;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+}

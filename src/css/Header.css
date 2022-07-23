@@ -1,0 +1,63 @@
+header {
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+  color: #fff;
+  background-color: #4f7dc9;
+  display: flex;
+  align-items: center;
+}
+
+#Search {
+  text-align: right;
+  flex: 1;
+}
+
+#hamburger-menu-button {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 4px 15px 0 15px;
+  cursor: pointer;
+  animation: .5s ease-in .5s 2 normal none running pulsate;
+}
+
+#logo-graphic {
+  margin: 20px 0 0 -5px;
+  height:80px;
+}
+
+#logo-app-name {
+  font-weight: bold;
+}
+
+#logo-flourish {
+  width: 40px;
+  height: 40px;
+  background: no-repeat url('../assets/ninja_star.svg');
+}
+
+#logo-tag-line {
+  font-weight: 300;
+}
+
+@keyframes pulsate {
+  0% {
+    transform:scale(1);
+  }
+  50% {
+    transform:scale(1.75);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  #logo-graphic, #logo-flourish, #logo-tag-line {
+    display: none;
+  }
+
+  #hamburger-menu-button {
+    display: block;
+  }
+}
